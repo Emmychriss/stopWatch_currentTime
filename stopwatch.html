@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stopwatch.css" />
+    <title>Stopwatch</title>
+  </head>
+  <body>
+    <div class="big-wrapper">
+      <div class="wrapper">
+        <h2>
+          e-Stopwatch
+          <span class="stopwatch"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              fill="currentColor"
+              class="bi bi-stopwatch-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6.5 0a.5.5 0 0 0 0 1H7v1.07A7.001 7.001 0 0 0 8 16a7 7 0 0 0 5.29-11.584.531.531 0 0 0 .013-.012l.354-.354.353.354a.5.5 0 1 0 .707-.707l-1.414-1.415a.5.5 0 1 0-.707.707l.354.354-.354.354a.717.717 0 0 0-.012.012A6.973 6.973 0 0 0 9 2.071V1h.5a.5.5 0 0 0 0-1h-3zm2 5.6V9a.5.5 0 0 1-.5.5H4.5a.5.5 0 0 1 0-1h3V5.6a.5.5 0 1 1 1 0z"
+              />
+            </svg>
+          </span>
+        </h2>
+        <p class="time-stamp">
+          <span class="minutes">00 <sub class="minText">m</sub></span
+          ><b class="colon1"> : </b>
+          <span id="seconds">00<sub class="secText">s</sub></span
+          ><b class="colon2"> : </b
+          ><sup class="milliSecText"><span id="milliSecs">00</span></sup>
+        </p>
+        <button id="button-start">Start</button>
+        <button id="button-stop">Stop</button>
+        <button id="button-reset">Reset</button>
+      </div>
+      <div>
+        <p class="timeText">
+          Current time
+          <span class="currentTimeText"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="25"
+              fill="currentColor"
+              class="bi bi-forward-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"
+              />
+            </svg>
+          </span>
+        </p>
+        <p id="showClock" class="clock" onload="showTime()"></p>
+      </div>
+    </div>
+
+    <script src="stopwatch.js"></script>
+  </body>
+</html>
